@@ -140,7 +140,32 @@ console.log(animals + "\nLength: " + animals.length);
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// create empty friends array that will act as a numbered list to hold many of the same type of data, with said data being strings that each represent a friend's name
+var friends = [];
 
+/*
+I: array
+O: random number representing a random index from the input array
+C: N/A
+E: N/A
+*/
+
+// function takes in an array and returns a random number representing one of the indexes of the input array
+function getRandom(animals) {
+    return Math.floor(Math.random() * animals.length);
+}
+
+// get a random index from getRandom and use it to assign the name of a random animal to the friends array
+friends.push(animals[getRandom(animals)].name);
+
+// log the friends array
+console.log(friends);
+
+// assign the friends array as a property to one of the objects in the animals array
+animals[getRandom(animals)].friends = friends;
+
+// log the animal object from the animals array
+console.log(animals.animal);
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
